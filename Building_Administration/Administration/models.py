@@ -13,7 +13,6 @@ class Building(models.Model):
         return self.name
 
 
- 
 class Apartament(models.Model):
     id = models.AutoField(primary_key=True)
     code = models.CharField(max_length=200,unique=True, verbose_name="Codigo")
