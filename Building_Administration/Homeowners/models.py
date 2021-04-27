@@ -8,6 +8,7 @@ class Homeowner(models.Model):
     name = models.CharField(max_length=200, verbose_name="Nombre")
     surname = models.CharField(max_length=200, verbose_name="Apellido")
     phone = models.CharField(max_length=200, verbose_name="Telefono")
+    email = models.EmailField(default="No tiene")
     apartament = models.ForeignKey(
         Apartament, on_delete=models.CASCADE, verbose_name="Departamento")
     
