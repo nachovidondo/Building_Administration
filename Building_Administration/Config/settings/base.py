@@ -30,7 +30,8 @@ BASE_APPS = [
 
 
 LOCAL_APPS = ['Administration', 
-              'Expenses'
+              'Expenses',
+              'Homeowners',
     
 ]
 
