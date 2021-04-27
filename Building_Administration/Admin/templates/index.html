@@ -1,3 +1,3 @@
 {% for building in buildings %}
-{{ building.name }}
+<a href="{% url 'apartaments_list' %}?building={{building.id}}"><button>{{ building.name }}</button></a>
 {% endfor %}
