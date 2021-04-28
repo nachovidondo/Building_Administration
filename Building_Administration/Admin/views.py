@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Administration.models import Building, Apartament
+from .models import Building, Apartament
 from django.views.generic  import ListView
 
 

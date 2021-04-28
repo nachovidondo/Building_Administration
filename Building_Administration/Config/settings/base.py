@@ -29,7 +29,7 @@ BASE_APPS = [
 ]
 
 
-LOCAL_APPS = ['Administration', 
+LOCAL_APPS = [
               'Expenses',
               'Homeowners',
               'Admin',

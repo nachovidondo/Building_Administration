@@ -1,5 +1,5 @@
 from django.db import models
-from Administration.models import Apartament
+from Admin.models import Apartament
 
 
 
