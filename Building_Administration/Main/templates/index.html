@@ -3,6 +3,6 @@
 {% for building in buildings %}
 <a href="{% url 'apartaments_list' %}?building={{building.id}}"><button>{{ building.name }}</button></a>
 {% endfor %}
-<a href="{% url 'homeowner_list' %}"><button>homeowner_list</button></a>
+<a href="{% url 'create_expense' %}"><button>Crear Expensa</button></a>
 <a href="{% url 'logout' %}"><button>Logout</button></a>
 {% endblock %}

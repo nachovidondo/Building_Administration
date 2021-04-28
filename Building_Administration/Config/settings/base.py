@@ -35,7 +35,7 @@ LOCAL_APPS = ['Main',
               'Admin',
 ]
 
-THIRD_APPS = [
+THIRD_APPS = ['crispy_forms',
     
 ]
 
@@ -111,3 +111,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'login'
+
+#Django Crispy
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
