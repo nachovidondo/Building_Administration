@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Telefono</th>
+        <th>Email</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+       
+        <td>{{ object_list.name }}</td>
+        <td>{{ object_list.surname }}</td>
+        <td>{{ object_list.phone }}</td>
+        <td>{{ object_list.email }}</td>
+       
+       
+      </tr>
+   
+    </tbody>
+  </table>  
+
+{% endblock %}
+

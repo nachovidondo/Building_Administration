@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Building, Apartament
-from django.views.generic  import ListView
+from django.views.generic  import ListView, DetailView
 
 
 
@@ -14,3 +14,4 @@ class ApartamentsList(ListView):
         if building_id:
             apartament = qs.filter(building__id=building_id)
         return apartament
+    

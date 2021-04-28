@@ -1,4 +1,5 @@
 from django.db import models
+from Homeowners.models import Homeowner
 
 
 
@@ -22,6 +23,8 @@ class Apartament(models.Model):
     balance_due = models.FloatField(verbose_name="Deuda")
     building = models.ForeignKey(Building, verbose_name="Edificio",
                                  on_delete=models.CASCADE)
+    owner = models.ForeignKey(
+        Homeowner, on_delete=models.CASCADE, verbose_name="Dueño")
     
     class Meta:
         verbose_name ="Departamento"

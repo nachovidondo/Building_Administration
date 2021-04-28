@@ -1,6 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-{% for apartament in apartaments %}
-{{ apartament.ph }}
-{% endfor %}
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>Edificio</th>
+        <th>PH</th>
+        <th>Codigo</th>
+        <th>Dueño</th>
+        <th>Deuda</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for apartament in apartaments %}
+        <td>{{ apartament.building }}</td>
+        <td>{{ apartament.ph }}</td>
+        <td>{{ apartament.code }}</td>
+        <td><a href="{% url 'homeowner_detail' %}?apartament={{apartament.owner}}">{{ apartament.owner }}</a></td>
+        <td>$ {{ apartament.balance_due }}</td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+
 {% endblock %}
+
