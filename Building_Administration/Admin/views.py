@@ -4,11 +4,6 @@ from django.views.generic  import ListView
 
 
 
-class Index(ListView):
-    model = Building
-    template_name ='index.html'
-    context_object_name = 'buildings'
-    
 class ApartamentsList(ListView):
     model = Apartament
     template_name = 'apartaments_list.html'
