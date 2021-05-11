@@ -1,5 +1,5 @@
 
-<img src="images/logo.png">
+<img src="Building_Administration/images/logo.png" width="800" height="500">
 
 1) Nuestro cliente nos pide que generemos una web donde  pueda cargar los datos de facturación de cada edificios que el administra  y que automáticamente los clientes puedan descargar su factura a pagar en formato PDF.
 2) A su vez el cliente debe llevar un control de los departamentos que poseen deuda y controlar esa deuda a medida que los inquilinos envían un pago.
