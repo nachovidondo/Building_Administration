@@ -1,8 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
+
 {% for building in buildings %}
 <a href="{% url 'apartaments_list' %}?building={{building.id}}"><button>{{ building.name }}</button></a>
 {% endfor %}
-<a href="{% url 'create_expense' %}"><button>Crear Expensa</button></a>
-<a href="{% url 'logout' %}"><button>Logout</button></a>
+
+
+
+        <div>   
+            <form method ="GET">
+   
+                    <div>
+                        <input type="text" class="form-control" name="Buscar expensa" placeholder="Buscar expensa">
+                        <span class="input-group-list">
+                            <i class="icon icon-search"></i>
+                            <button type="submit" class="boton btn-succes">Buscar</button>
+                        </span>
+                    </div>
+                
+
+            </form>
+        </div>
+<div>
+   {% for aparta in apartament %} 
+   {{ aparta.owner}}
+   {%  endfor %}
+</div>
+
 {% endblock %}

@@ -1,16 +1,17 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 from Admin.models import Building
 
 
 
-class Expensas(models.Model):
+class Expense(models.Model):
     id = models.AutoField(primary_key=True)
     payment = models.BooleanField(default=False, verbose_name="Pago")
     building = models.ForeignKey(
         Building, on_delete=models.CASCADE, verbose_name="Edificio")
-    expensas_puras = models.FloatField(
+    expensas_puras = models. PositiveIntegerField(
         verbose_name="Expensas Puras",blank=True, null=True)
-    total_ingresos = models.FloatField(
+    total_ingresos = models.FloatField(validators=[MinValueValidator(0)],
         verbose_name="Total ingresos",blank=True, null=True)
     deuda_totales = models.FloatField(
         verbose_name="Total Adeudado",blank=True, null=True)
@@ -59,5 +60,5 @@ class Expensas(models.Model):
         verbose_name_plural = "Expensas"
         
     def __str__(self):
-        return self.id
+        return str(self.id)
     
